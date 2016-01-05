@@ -30,8 +30,13 @@ gem 'jbuilder', '~> 1.2'
 # Add bootstraps
 gem 'bootstrap-sass', '~> 3.3.5.1'
 
+# Add simple form
+gem 'simple_form'
+
 # Add sprockets
 gem 'sprockets', '2.11.0'
+
+
 
 
 
