@@ -1,0 +1,8 @@
+<h1>This is da index on my awesome web app</h1>
+ 
+<%= @posts.each do |post| %>
+	<div>
+		<h2><%= post.title %></h2>
+		<p><%= post.description %></p>
+	</div>
+<% end %>	
