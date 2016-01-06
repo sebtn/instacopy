@@ -33,11 +33,11 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 # Add simple form
 gem 'simple_form'
 
+# Add user ids
+gem 'devise', '>= 3.2.4'
+
 # Add sprockets
 gem 'sprockets', '2.11.0'
-
-
-
 
 
 group :doc do

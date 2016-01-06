@@ -8,5 +8,15 @@ class PostsController < ApplicationController
 		@post = Post.new
 	end	
 
+	def create
+		Post.create(post_params)
+		redirect_to rooth_path
+	end	
+
+	private
+
+	def post_params
+		params.require(:post).permit(:title, :description)
+	end	
 
 end
