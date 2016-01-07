@@ -1,0 +1,9 @@
+<div class="box-each col-xs-12">
+	<h1>Edit your Post</h1>
+	<%= simple_form_for @post do |f| %>
+		<%= f.input :title %>
+		<%= f.input :description %>
+		<br />
+		<%= f.submit :Update, :class => 'btn btn-primary' %>
+	<% end %>	
+</div>

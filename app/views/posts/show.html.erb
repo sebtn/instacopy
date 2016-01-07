@@ -1,5 +1,13 @@
 
-<div class="box-show-each">
-	<h1><%= @post.title %></h1><br />
-	<p><%= @post.description %></p><br />
+<div class="box-each col-xs-12">
+	<h1><%= @post.title %></h1>
+	<p><%= @post.description %></p>
+	<br />
+	<br />
+	<div class='pull-right'>
+	<% if current_user && current_user == @post.user %>	
+		<%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-primary' %>
+		<%= link_to 'Destroy', post_path(@post), :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => 'btn btn-danger' %>
+	<% end %>	
+	</div>
 </div>

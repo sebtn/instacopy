@@ -1,7 +1,7 @@
 <h1>This is da index on my awesome web app</h1>
 <hr /> 
 <%= @posts.each do |post| %>
-	<div class="box-in-posts">
+	<div class="box-in-posts col-xs-12">
 		<h2><%= link_to post.title, post_path(post) %></h2><br />
 		<p><%= post.description %></p><br />
 

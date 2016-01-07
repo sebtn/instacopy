@@ -23,15 +23,33 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Link</a></li>
-      </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to new_post_path do %>
+          <i style="font-size:2.5em;" class="glyphicon glyphicon-upload"></i>
+          Post
+          <% end %>
+        </li>
         <% if user_signed_in? %>
-          <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+          <li>
+            <%= link_to destroy_user_session_path, :method => :delete  do %>
+            <i style="font-size:2.5em;" class="glyphicon glyphicon-eject"></i>
+            Eject
+            <% end %>
+          </li>
         <% else %>
-          <li><%= link_to 'Sign in', new_user_session_path %></li>  
-          <li><%= link_to 'Sign up', new_user_registration_path %></li> 
+          <li>
+            <%= link_to  new_user_session_path do %>
+            <i style="font-size:2.5em;" class="glyphicon glyphicon-inbox"></i>
+            Inbox
+            <% end %>
+          </li>  
+          <li>
+            <%= link_to new_user_registration_path  do %>
+            <i style="font-size:2.5em;" class="glyphicon glyphicon-user"></i>
+            Sign-up
+            <% end %>
+          </li> 
         <% end %>  
       </ul>
     </div><!-- /.navbar-collapse -->
