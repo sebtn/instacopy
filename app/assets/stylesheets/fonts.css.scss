@@ -11,3 +11,17 @@
     font-style: normal;
 
 }
+
+
+@font-face {
+    font-family: 'deftone_stylusregular';
+    src: url('/assets/deftone-webfont.eot');
+    src: url('/assets/deftone-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/deftone-webfont.woff2') format('woff2'),
+         url('/assets/deftone-webfont.woff') format('woff'),
+         url('/assets/deftone-webfont.ttf') format('truetype'),
+         url('/assets/deftone-webfont.svg#deftone_stylusregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
