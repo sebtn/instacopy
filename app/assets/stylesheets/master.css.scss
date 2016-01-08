@@ -1,7 +1,7 @@
 
 .navbar.navbar-inverse {
-	  background-color: #1E67BA;
-	  border-color: #1E67BA;
+	  background-color: #49779B;
+	  border-color: #49779B;
 	  border-radius: 0;
 	  box-shadow: 0px 2px 1px #2a2a2a;
     padding-bottom:20px;
@@ -74,6 +74,15 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF;
     padding-top:30px;
    
+}
+
+.box-in-posts > li {
+  color: #49779B;
+}
+
+
+.clear {
+  clear: both;
 }
 
 

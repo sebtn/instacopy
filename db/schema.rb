@@ -17,9 +17,11 @@ ActiveRecord::Schema.define(version: 20160107234931) do
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.text    "message"
-    t.integer "user_id"
-    t.integer "post_id"
+    t.text     "message"
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
