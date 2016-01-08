@@ -4,8 +4,10 @@
 	  border-color: #49779B;
 	  border-radius: 0;
 	  box-shadow: 0px 2px 1px #2a2a2a;
-    padding-bottom:20px;
-    color:#FFFFFF; 
+    padding-bottom:0px;
+    padding-top:20px;
+    color: #FFFFFF;
+
   
 }
 
@@ -17,12 +19,25 @@
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  margin-top:10px;
+  margin-top:100px;
   margin-bottom:15px;
   padding:20px;
 }
 
-.box-each{
+.box-in-posts-1 {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top:20px;
+  margin-bottom:15px;
+  padding:20px;
+}
+
+
+.box-each {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -47,6 +62,19 @@
   
 }
 
+.box-profile {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top:100px;
+  margin-bottom:05px;
+  padding:05px; 
+  
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
@@ -64,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-inverse .navbar-brand {
   font-family: 'deftone_stylusregular' !important;
   color: #FFFFFF;
-  padding-top:35px;
+  padding-top:5px;
   font-size: 75px;
 }
 
@@ -72,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .nav > li > a {
     float: none;
     color: #FFFFFF;
-    padding-top:30px;
+    padding-top:0px;
    
 }
 
@@ -92,6 +120,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -100,6 +129,7 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }

@@ -1,6 +1,5 @@
-<h1>This is da index on my awesome web app</h1>
-<hr /> 
-<%= @posts.each do |post| %>
+
+<% @posts.each do |post| %>
 	<div class="box-in-posts col-xs-12">
 		<h2><%= link_to post.title, post_path(post) %></h2><br />
 		<p><%= post.description %></p><br />
@@ -8,6 +7,15 @@
 		<% if post.user.present? %>
 			<small><%= post.user.email %></small>
 		<% end %>	
-	</div>
-<hr /> 	
+
+		<% if post.comments.present? %>
+			<div class="col-xs-12">
+				<blockquote>
+					<%= post.comments.last.message %>
+					<small><%= post.comments.last.user.email %></small> 
+				</blockquote>
+			</div>	
+		<% end %>
+			
+	</div>	
 <% end %>	
