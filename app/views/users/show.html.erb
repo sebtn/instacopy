@@ -26,8 +26,10 @@
   </div>
 <% end %>
 
-
+<div class="clear"></div>
+<br /><br />
 <h1 class="text-center">Posted</h1>
+<br /><br />
 <% @user.posts.each do |post| %>
 	<div class="box-in-posts-1 col-xs-10 col-xs-offset-1">
 		<h2><%= link_to post.title, post_path(post) %></h2><br />
