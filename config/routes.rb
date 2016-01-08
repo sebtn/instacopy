@@ -9,7 +9,8 @@
 
   resources :posts do
     resources :comments, :only => :create
-  end   
+  end
+  resources :users, :only => :show   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
