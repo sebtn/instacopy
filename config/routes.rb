@@ -7,7 +7,9 @@
   # root 'welcome#index'
   root 'posts#index'
 
-  resources :posts
+  resources :posts do
+    resources :comments, :only => :create
+  end   
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
