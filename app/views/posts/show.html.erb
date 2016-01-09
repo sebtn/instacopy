@@ -6,11 +6,12 @@
 	<br />
 	<div class='pull-right'>
 	<% if current_user && current_user == @post.user %>	
-		<!-- Button trigger modal -->
-		<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-		  Add comment</button>
+		
 		<%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-primary' %>
-		<%= link_to 'Destroy', post_path(@post), :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => 'btn btn-danger' %>		
+		<%= link_to 'Destroy', post_path(@post), :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => 'btn btn-danger' %>	
+		<button class="btn btn-primary btn-md" data-toggle="modal" data-target="#Photo">
+					Add a photo
+		</button>	
 	<% end %>	
 	</div>
 </div>
@@ -19,19 +20,33 @@
 <br />
 
 <!-- Modal for Photos -->
-
-<div class="box-in-posts col-xs-10 col-xs-offset-1">
-	<h1>Upload an image</h1>
-	<%= simple_form_for @photo, :url => post_photos_path(@post) do |f| %>
-		<%= f.input :picture %>	
-		<br />
-		<%= f.submit 'Create', :class => 'btn btn-success' %>
-	<% end %>	
+<div class="modal fade" id="Photo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Upload an image</h4>
+			</div>
+			<%= simple_form_for @photo, :url => post_photos_path(@post) do |f| %>
+				<div class="modal-body">  	
+					<%= f.input :picture %>
+				</div>	
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>    
+					<%= f.submit "Upload it!", :class => 'btn btn-success' %>  
+				</div>
+			<% end %>
+		</div>
+	</div>
 </div>
+<br />
 
+<div class='clear'></div>
+<br />
 
+			  
 <!-- Modal for comments -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="Comment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -51,11 +66,17 @@
   </div>
 </div>
 <br />
+<br />
+<div class='clear'></div>
+<br />
 
-
-<div class="col-xs-10 col-xs-offset-0">
+<div class="col-xs-10 col-xs-offset-1">
 	<h1 class="pull-left">Comments</h1>
+	<!-- Modal button for comments -->
+	<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#Comment">Add comment</button>
 </div>
+
+
 <div class='clear'></div>
 
 <% @post.comments.each do |comment| %>
@@ -70,6 +91,10 @@
 <% end %>	
 
 <div class="clear"></div>
+
+<% @post.photos.each do |photo| %>
+	<%= image_tag photo.picture %>
+<% end %>
 
 
 
