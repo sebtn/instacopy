@@ -18,7 +18,19 @@
 <div class='clear'></div>
 <br />
 
-<!-- Modal -->
+<!-- Modal for Photos -->
+
+<div class="box-in-posts col-xs-10 col-xs-offset-1">
+	<h1>Upload an image</h1>
+	<%= simple_form_for @photo, :url => post_photos_path(@post) do |f| %>
+		<%= f.input :picture %>	
+		<br />
+		<%= f.submit 'Create', :class => 'btn btn-success' %>
+	<% end %>	
+</div>
+
+
+<!-- Modal for comments -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -40,13 +52,14 @@
 </div>
 <br />
 
+
 <div class="col-xs-10 col-xs-offset-0">
 	<h1 class="pull-left">Comments</h1>
 </div>
 <div class='clear'></div>
 
 <% @post.comments.each do |comment| %>
-  <div class="col-xs-12 col-sm-4">
+  <div class="col-xs-10 col-xs-offset-1">
 	<div>
 		<blockquote>
 			<b><%= comment.message %></b>
@@ -55,4 +68,9 @@
 	</div>		
   </div>		
 <% end %>	
+
+<div class="clear"></div>
+
+
+
 

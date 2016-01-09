@@ -19,34 +19,34 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to new_post_path do %>
-          <i style="font-size:2.5em;" class="glyphicon glyphicon-send"></i>
-          Post
+          <i style="font-size:3.5em;" class="glyphicon glyphicon-send"></i>
+          
           <% end %>
         </li>
         <% if user_signed_in? %>
           <li>
             <%= link_to user_path(current_user) do %>
-            <i style="font-size:2.5em;" class="glyphicon glyphicon-user"></i>
-            Profile
+            <i style="font-size:3.5em;" class="glyphicon glyphicon-user"></i>
+            
             <% end %>
           </li>
           <li>
             <%= link_to destroy_user_session_path, :method => :delete  do %>
-            <i style="font-size:2.5em;" class="glyphicon glyphicon-eject"></i>
-            Eject
+            <i style="font-size:3.5em;" class="glyphicon glyphicon-eject"></i>
+            
             <% end %>
           </li>
         <% else %>
           <li>
             <%= link_to  new_user_session_path do %>
-            <i style="font-size:2.5em;" class="glyphicon glyphicon-inbox"></i>
-            Inbox
+            <i style="font-size:3.5em;" class="glyphicon glyphicon-inbox"></i>
+            
             <% end %>
           </li>  
           <li>
             <%= link_to new_user_registration_path  do %>
-            <i style="font-size:2.5em;" class="glyphicon glyphicon-pencil"></i>
-            Sign-up
+            <i style="font-size:3.5em;" class="glyphicon glyphicon-pencil"></i>
+            
             <% end %>
           </li> 
         <% end %>  

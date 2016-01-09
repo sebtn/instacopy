@@ -9,6 +9,7 @@
 
   resources :posts do
     resources :comments, :only => :create
+    resources :photos, :only => :create
   end
   resources :users, :only => :show   
   # Example of regular route:

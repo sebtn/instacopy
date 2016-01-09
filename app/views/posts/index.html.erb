@@ -1,5 +1,5 @@
 
-<% @posts.each do |post| %>
+<% @posts.reverse.each do |post| %>
 	<div class="box-in-posts col-xs-12">
 		<h2><%= link_to post.title, post_path(post) %></h2><br />
 		<p><%= post.description %></p><br />
