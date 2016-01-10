@@ -9,14 +9,6 @@
 		<% end %>	
 		<div class='clear'></div>
 		<br />
-		<% if post.comments.present? %>
-			<div class="col-xs-12">
-				<blockquote>
-					<%= post.comments.last.message %>
-					<small><%= post.comments.last.user.email %></small> 
-				</blockquote>
-			</div>	
-		<% end %>
 
 		<% if post.photos.present? %>
 			<div class="col-xs-12">	
@@ -29,5 +21,15 @@
 				<% end %>
 			</div>		
 		<% end %>
+
+		<% if post.comments.present? %>
+			<div class="col-xs-12">
+				<blockquote>
+					<%= post.comments.last.message %>
+					<small><%= post.comments.last.user.email %></small> 
+				</blockquote>
+			</div>	
+		<% end %>
+		
 	</div>	
 <% end %>	
