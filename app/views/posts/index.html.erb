@@ -10,7 +10,7 @@
 		<div class='clear'></div>
 		<br />
 		<% if post.comments.present? %>
-			<div class="col-xs-10 col-xs-offset-1">
+			<div class="col-xs-12 col-xs-offset-0">
 				<blockquote>
 					<%= post.comments.last.message %>
 					<small><%= post.comments.last.user.email %></small> 
@@ -19,7 +19,7 @@
 		<% end %>
 
 		<% if post.photos.present? %>
-			<div class="col-xs-10 col-xs-offset-1">
+			<div class="col-xs-12 col-xs-offset-0">
 				<% if post.photos.last.picture.present? %>
 					<%= image_tag post.photos.last.picture, :class => 'img-responsive' %>
 				<% end %>

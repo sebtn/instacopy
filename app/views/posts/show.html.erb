@@ -10,7 +10,7 @@
 		
 		<%= link_to 'Edit post', edit_post_path(@post), :class => 'btn btn-primary' %>
 		<%= link_to 'Destroy', post_path(@post), :method => :delete, :data => {:confirm => 'Are you sure?'}, :class => 'btn btn-danger' %>	
-		<button class="btn btn-primary btn-md" data-toggle="modal" data-target="#Photo">
+		<button class="btn btn-md" data-toggle="modal" data-target="#Photo">
 					Add a photo
 		</button>	
 	<% end %>	
@@ -68,9 +68,11 @@
 
 <div class="big-box col-xs-12">	
 	<div class="container-fluid">
+		<div class="img-responsive-parent">	
 			<% @post.photos.each do |photo| %>
 				<%= image_tag photo.picture, :class => 'img-responsive' %>
 			<% end %>
+		</div>	
 	</div>		
 	<br />
 	<br />
