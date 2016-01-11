@@ -29,7 +29,12 @@
 					<small><%= post.comments.last.user.email %></small> 
 				</blockquote>
 			</div>	
-		<% end %>
-		
+		<% end %>		
 	</div>	
 <% end %>	
+
+<div class="clear"></div>			
+
+<div class="col-xs-12 text-center">
+	<%= paginate @posts %>	
+</div>

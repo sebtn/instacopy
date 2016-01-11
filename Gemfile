@@ -48,6 +48,9 @@ gem 'figaro', '>= 1.0.0.rc1'
 # Add fog
 gem "fog", "~> 1.3.1"
 
+# Add pagination
+gem 'kaminari'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
