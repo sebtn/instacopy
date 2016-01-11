@@ -43,7 +43,7 @@ gem 'sprockets', '2.11.0'
 gem 'carrierwave'
 
 # Add figaro
-gem 'figaro'
+gem 'figaro', '>= 1.0.0.rc1'
 
 # Add fog
 gem "fog", "~> 1.3.1"
