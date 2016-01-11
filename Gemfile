@@ -42,6 +42,12 @@ gem 'sprockets', '2.11.0'
 # Add image uploader
 gem 'carrierwave'
 
+# Add figaro
+gem 'figaro'
+
+# Add fog
+gem "fog", "~> 1.3.1"
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
